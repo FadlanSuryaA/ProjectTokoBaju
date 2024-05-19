@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="141" pageHeight="226" columnWidth="101" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ef882b33-9816-475c-ac95-0af6ba835524">
+	<property name="ireport.zoom" value="2.853116706110003"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from penjualan;]]>
+	</queryString>
+	<field name="nama_barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlah_barang" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="tanggal">
+		<groupExpression><![CDATA[$F{tanggal}]]></groupExpression>
+	</group>
+	<group name="nama_barang">
+		<groupExpression><![CDATA[$F{nama_barang}]]></groupExpression>
+	</group>
+	<group name="harga">
+		<groupExpression><![CDATA[$F{harga}]]></groupExpression>
+	</group>
+	<group name="jumlah_barang">
+		<groupExpression><![CDATA[$F{jumlah_barang}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="0" width="78" height="18" uuid="1ac01e00-a94a-4ef6-a6f1-32b419e33029"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[ADA ALL SHOP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="18" width="79" height="16" uuid="ec741eca-1182-4ced-8fc1-d442a1f7a588"/>
+				<textElement>
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[JL Perum Demang Mulia, Jember]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="28" width="61" height="14" uuid="54feaa38-5644-431e-a7bc-e8102c8fed82"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<text><![CDATA[No Telp : 08821912218]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="40" width="100" height="1" uuid="049021cf-65a9-4818-baf4-a0eb46726352"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="29" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="25" height="8" uuid="9a668255-2e7e-4530-aa21-3a4f073503c5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="5"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="0" width="16" height="8" uuid="c6a32497-e434-497b-8f1d-c50154b87c94"/>
+				<textElement>
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[QTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="0" width="17" height="8" uuid="5d111715-97df-44cb-94ad-39fad1766ffb"/>
+				<textElement>
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="8" width="100" height="1" uuid="21b3964f-23f0-4683-a996-09016533045d"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="9" width="35" height="8" uuid="f2029a6a-679a-4080-9623-18f87f4a1799"/>
+				<textElement>
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="45" y="8" width="16" height="9" uuid="4cdc62f0-9f8d-4826-b67d-d7e1cd16f774"/>
+				<textElement>
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="8" width="17" height="9" uuid="254a85c9-1d99-4677-9b03-ec3043e2ad7e"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="51" splitType="Stretch"/>
+	</summary>
+</jasperReport>
