@@ -30,7 +30,7 @@ public class Menu extends JComponent {
         {"Dashboard"},
         {"Master Data", "Data Barang", "Data Kategori", "Data Supplier"},
         {"Penjualan"},
-        {"Pembelian","Beli", "Return"},
+        {"Pembelian","Restock", "Return"},
         {"Laporan"}
        
     };

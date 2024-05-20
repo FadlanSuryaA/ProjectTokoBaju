@@ -12,6 +12,7 @@ import component.Return;
 import component.DefaultForm;
 import component.HomeForm;
 import component.Laporan;
+import component.Restock;
 import java.awt.Component;
 import javax.swing.JFrame;
 import menu.MenuEvent;
@@ -46,7 +47,7 @@ public class Main extends javax.swing.JFrame {
                 if (subIndex == 0) {
                     showForm(new DefaultForm("Pembelian"));
                 } else if (subIndex == 1) {
-                    showForm(new Pembelian());
+                    showForm(new Restock());
                 } else if (subIndex == 2) {
                     showForm(new retur ("Return"));
                 }
